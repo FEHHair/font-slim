@@ -37,7 +37,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
+    "build:target": "esno src/target.ts",
+    "build:nl": "esno src/nl.ts",
     "dev": "unbuild --stub",
     "lint": "eslint .",
     "prepublishOnly": "nr build",
@@ -46,6 +47,9 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks"
+  },
+  "dependencies": {
+    "fontmin": "^1.1.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.18.1",
